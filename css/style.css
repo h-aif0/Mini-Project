@@ -276,6 +276,7 @@ body {
    الفوتر (Footer Styles)
    =================================================== */
 .footer {
+    width: 100% !important;
     background-color: #212529;
     color: #ffffff;
     padding: 35px 0 20px;
