@@ -199,29 +199,72 @@ body {
 
 /* ===================================================
    التجاوب مع الشاشات (Responsive)
+   تابلت وهواتف: كاردين في كل صف (2 cards per row)
    =================================================== */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     #foodMenuTitle {
-        font-size: 26px;
+        font-size: 28px;
         margin-top: 25px;
         margin-bottom: 20px;
     }
 
+    /* كاردين في كل صف على التابلت والفون */
+    .row.g-4 > [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
     .card-img-top {
-        height: 170px;
+        height: 160px;
     }
 }
 
 @media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .row.g-4 {
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 14px;
+    }
+
+    /* كاردين في كل صف على الفون */
+    .row.g-4 > [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
     #foodMenuTitle {
         font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 16px;
     }
 
     .card-img-top {
-        height: 150px;
+        height: 130px;
+    }
+
+    .card-body {
+        padding: 10px 6px;
     }
 
     .card-title {
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .badge {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+    }
+
+    .card-btn,
+    .order-btn {
+        font-size: 11px !important;
+        padding: 5px 10px !important;
     }
 }

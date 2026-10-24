@@ -33,23 +33,29 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url("../imges/background.avif");
+    /* شاشة سوداء مع تقليل الأوباسيتي لإبراز النصوص */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../imges/background.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero .caption h1 {
     color: #ffffff;
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 700;
     margin-bottom: 12px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
 }
 
 .hero .caption p {
-    color: #f0f0f0;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 /* ===================================================
@@ -342,12 +348,16 @@ body {
 @media (max-width: 991px) {
     .food,
     .drinks {
-        gap: 20px;
+        gap: 16px;
     }
 
     .card {
-        width: 100%;
-        max-width: 320px;
+        width: calc(50% - 12px) !important;
+        max-width: 100% !important;
+    }
+
+    .card-img-top {
+        height: 160px;
     }
 }
 
@@ -358,24 +368,36 @@ body {
     }
 
     .hero .caption h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .hero .caption p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .home2 h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
+    /* كاردين في كل صف على الفون */
     .card {
-        width: 100%;
-        max-width: 300px;
+        width: calc(50% - 8px) !important;
+        max-width: 100% !important;
+        margin-bottom: 12px;
     }
 
     .card-img-top {
-        height: 180px;
+        height: 130px;
+    }
+
+    .card .card-text {
+        font-size: 14px;
+        margin: 10px 0 6px;
+    }
+
+    .card .btn {
+        font-size: 11px;
+        padding: 5px 12px;
     }
 
     .contact-form-card {
